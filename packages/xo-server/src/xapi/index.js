@@ -2023,7 +2023,7 @@ export default class Xapi extends XapiBase {
       // preferred datasource: NoCloud
       //
       // https://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html
-      writeFile('meta-data', 'instance-id: ' + vm.uuid + '\n'),
+      writeFile('meta-data', 'instance-id: ' + vm.uuid + '\ndsmode: local\n'),
       writeFile('user-data', userConfig),
       networkConfig !== undefined && writeFile('network-config', networkConfig),
 
